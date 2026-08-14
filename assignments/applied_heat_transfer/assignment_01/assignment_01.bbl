@@ -1,0 +1,115 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{dominguez-olivaAnatomicalPhysiologicalBehavioral2022}{article}{}
+      \name{author}{11}{}{%
+        {{hash=6aba0a97ea7fbe4b23e140110ad2e18f}{%
+           family={{Domínguez-Oliva}},
+           familyi={D\bibinitperiod},
+           given={Adriana},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7b1a44a570d1e06584d6719cba416802}{%
+           family={Ghezzi},
+           familyi={G\bibinitperiod},
+           given={Marcelo\bibnamedelima Daniel},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=a3c2f0f36c2eb50b110f90ca751ea4ba}{%
+           family={{Mora-Medina}},
+           familyi={M\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4460f208140620bbc7da78c31e1ce94b}{%
+           family={{Hernández-Ávalos}},
+           familyi={H\bibinitperiod},
+           given={Ismael},
+           giveni={I\bibinitperiod}}}%
+        {{hash=39e05412b1a5535db28e953c61e398c5}{%
+           family={Jacome},
+           familyi={J\bibinitperiod},
+           given={Joseline},
+           giveni={J\bibinitperiod}}}%
+        {{hash=662ad1fb26108b931a3b217df5c7724f}{%
+           family={Castellón},
+           familyi={C\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=58e280ac8b6fbff614724580f78b4d99}{%
+           family={Falcón},
+           familyi={F\bibinitperiod},
+           given={Isabel},
+           giveni={I\bibinitperiod}}}%
+        {{hash=42b590086a09009f000b3f44b880ebba}{%
+           family={Reséndiz},
+           familyi={R\bibinitperiod},
+           given={Fátima},
+           giveni={F\bibinitperiod}}}%
+        {{hash=984266f514c4ab486bf6477072dedced}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={Nicole},
+           giveni={N\bibinitperiod}}}%
+        {{hash=8b548fd9a64b401d4f1c9bc66557b26d}{%
+           family={Ponce},
+           familyi={P\bibinitperiod},
+           given={Raúl},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c778aa950f914e2ae0635a73aebdd0f9}{%
+           family={{Mota-Rojas}},
+           familyi={M\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f7a59c49b96511900e5835024231ada2}
+      \strng{fullhash}{4c672dbf4d3514c211f870546aaffab6}
+      \strng{bibnamehash}{f7a59c49b96511900e5835024231ada2}
+      \strng{authorbibnamehash}{f7a59c49b96511900e5835024231ada2}
+      \strng{authornamehash}{f7a59c49b96511900e5835024231ada2}
+      \strng{authorfullhash}{4c672dbf4d3514c211f870546aaffab6}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{author}
+      \field{abstract}{Elephants use different thermoregulatory mechanisms that depend on the anatomical and morphological characteristics of the species. The crevices and wrinkles of the skin enhance the water-retention capacity of the epidermis. The highly vascularized ear is another region of particular interest, as its movement and vasomotor changes promote heat dissipation. Generally, these mechanisms are modulated by the hypothalamic thermoregulatory center and by the peripheral response of animals. Nonetheless, elephants are currently exposed to alterations in their habitats, such as global warming and climatic changes, which challenge their homeothermy. This article aims to discuss the thermoregulation mechanisms of African (Loxodonta africana) and Asian (Elephas maximus) elephants from an anatomical, physiological, and behavioral basis. The practical implications of these elements will be analyzed to implement tools, such as infrared thermography, or environmental enrichment, as strategies to promote the thermal balance of elephants.}
+      \field{issn}{2318-1265, 2318-1265}
+      \field{journaltitle}{Journal of Animal Behaviour and Biometeorology}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{4}
+      \field{title}{Anatomical, Physiological, and Behavioral Mechanisms of Thermoregulation in Elephants}
+      \field{urlday}{14}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{10}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \field{pages}{2233}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.31893/jabb.22033
+      \endverb
+      \verb{file}
+      \verb C:\Users\abdul\Zotero\storage\6F9F2KR7\Domínguez-Oliva et al. - 2022 - Anatomical, physiological, and behavioral mechanisms of thermoregulation in elephants.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

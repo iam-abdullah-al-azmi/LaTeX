@@ -1,0 +1,197 @@
+\documentclass{article}
+
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{eulervm}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{mathpazo}
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts, amsmath, amssymb}
+
+\setstretch{1.50}
+\geometry{paper=letterpaper, layout=letterpaper, margin=1in}
+
+\begin{document}
+
+\begin{titlepage}
+	\begin{center}
+		\vspace*{2cm}
+		{\Huge \textbf{ ME 4638: Computational Mechanics Lab}} \\
+		\vspace{1cm}
+		\Large{\textbf{Assignment I}} \\
+
+		\vfill
+
+		\textit{\large Submitted by:} \\
+		\vspace{0.3cm}
+		\textbf{Abdullah al Azmi} \\
+		\textbf{ID: 220011230} \\
+
+		\vfill
+
+		\textit{\large Submitted to:} \\
+		\vspace{0.3cm}
+		\textbf{\Large Sefat Mahmud Siddique (Junior Lecturer)} \\
+		\textbf{Department of Mechanical and Production Engineering} \\
+
+		\vfill
+
+		\textbf{Date of Submission: \today}
+		\vspace*{1cm}
+	\end{center}
+\end{titlepage}
+
+\newpage
+
+\setcounter{section}{2}
+
+\section{Change the loading}
+
+\begin{itemize}
+	\item [a.] The load has been changed from 1000 MPa to 2000 MPa.
+	\item [b.] Since the system is linear elastic, doubling the load from 1000 MPa to 2000 MPa is expected to exactly double the magnitude of both deformation and stress.
+	\item [c.] The value of maximum deformation and maximum stress are following: 33.696 mm and 65521 MPa, respectively.
+	\item [d.] The location of maximum deformation is at the right end of the system, while the location of maximum stress is at the top and bottom edge of the hole.
+	\item [e.] The figure of Total Deformation, Equivalent Stress, and Maximum Principal Stress are shown below:
+	      \begin{itemize}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/total_deformation.png}
+			            \caption{Total Deformation}
+		            \end{figure}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/equivalent_stress.png}
+			            \caption{Equivalent Stress}
+		            \end{figure}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/maximum_principal_stress.png}
+			            \caption{Maximum Principal Stress}
+		            \end{figure}
+	      \end{itemize}
+	\item [f.] Yes, the results are consistent with the expectation. The stress and deformation values are directly proportional to the applied load in a linear elastic system, so doubling the load should indeed double the stress and deformation, which is what we observe in the results.
+\end{itemize}
+
+\section{Change the mesh size}
+
+\begin{itemize}
+	\item [a.] The mesh size has been changed from 5 mm to 2.5 mm and 10 mm.
+	\item [b.] The number of elements for the 2.5 mm mesh is 9283, while the number of elements for the 10 mm mesh is 587.
+	\item [c.] For the 2.5 mm mesh, the number of elements is higher because smaller elements edge lengths require more units to fill the same 2D area.
+	\item [d.] “The number of elements for 2.5 mm mesh was 4 times compared that obtained from the 10 mm mesh.” This is because the area of each element in the 2.5 mm mesh is 4 times smaller than that of the 10 mm mesh (since area scales with the square of the edge length), leading to a fourfold increase in the number of elements needed to cover the same area.
+	\item [e.] The figure of Total Deformation, Equivalent Stress, and Maximum Principal Stress for the 2.5 mm mesh are shown below:
+	      \begin{itemize}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/total_deformation_2.5mm.png}
+			            \caption{Total Deformation (2.5 mm mesh)}
+		            \end{figure}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/equivalent_stress_2.5mm.png}
+			            \caption{Equivalent Stress (2.5 mm mesh)}
+		            \end{figure}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/maximum_principal_stress_2.5mm.png}
+			            \caption{Maximum Principal Stress (2.5 mm mesh)}
+		            \end{figure}
+	      \end{itemize}
+	\item [f.] The figure of Total Deformation, Equivalent Stress, and Maximum Principal Stress for the 10 mm mesh are shown below:
+	      \begin{itemize}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/total_deformation_10mm.png}
+			            \caption{Total Deformation (10 mm mesh)}
+		            \end{figure}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/equivalent_stress_10mm.png}
+			            \caption{Equivalent Stress (10 mm mesh)}
+		            \end{figure}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/maximum_principal_stress_10mm.png}
+			            \caption{Maximum Principal Stress (10 mm mesh)}
+		            \end{figure}
+	      \end{itemize}
+\end{itemize}
+
+\section{Change the meshing method}
+
+\begin{itemize}
+	\item [a.] The meshing method has been changed from quadrilateral elements to triangular elements, keeping the mesh size at 5 mm.
+	\item [b.] The number of elements for the triangular mesh is 9765, while the number of elements for the quadrilateral mesh is 7195.
+	\item [c.] The figure of Total Deformation, Equivalent Stress, and Maximum Principal Stress for the triangular mesh are shown below:
+	      \begin{itemize}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/total_deformation_triangular.png}
+			            \caption{Total Deformation (Triangular mesh)}
+		            \end{figure}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/equivalent_stress_triangular.png}
+			            \caption{Equivalent Stress (Triangular mesh)}
+		            \end{figure}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/maximum_principal_stress_triangular.png}
+			            \caption{Maximum Principal Stress (Triangular mesh)}
+		            \end{figure}
+	      \end{itemize}
+\end{itemize}
+
+\section{Change the size of the hole}
+
+\begin{itemize}
+	\item [a.] The diameter of the hole has been changed from 50 mm to 125 mm.
+	\item [b.] The maximum stress is expected to increase significantly with the increase in hole diameter, as a larger hole creates a greater stress concentration around its edges.
+	\item [c.] The value of maximum deformation and maximum stress in quadrilateral mesh is 69.639 mm and 116830 MPa, respectively while the value of maximum deformation and maximum stress in triangular mesh is 69.638 mm and 116760 MPa, respectively.
+	\item [d.] The location of maximum deformation is at the right end of the system, while the location of maximum stress is at the top and bottom edge of the hole for both quadrilateral and triangular mesh.
+	\item [e.] The figure of Total Deformation, Equivalent Stress, and Maximum Principal Stress for the quadrilateral mesh are shown below:
+	      \begin{itemize}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/total_deformation_dia_125mm_quadilateral.png}
+			            \caption{Total Deformation (Hole diameter 125 mm, Quadrilateral mesh)}
+		            \end{figure}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/equivalent_stress_dia_125mm_quadilateral.png}
+			            \caption{Equivalent Stress (Hole diameter 125 mm, Quadrilateral mesh)}
+		            \end{figure}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/maximum_principal_stress_dia_125mm_quadilateral.png}
+			            \caption{Maximum Principal Stress (Hole diameter 125 mm, Quadrilateral mesh)}
+		            \end{figure}
+	      \end{itemize}
+	\item [f.] The figure of Total Deformation, Equivalent Stress, and Maximum Principal Stress for the triangular mesh are shown below:
+	      \begin{itemize}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/total_deformation_dia_125mm_triangular.png}
+			            \caption{Total Deformation (Hole diameter 125 mm, Triangular mesh)}
+		            \end{figure}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/equivalent_stress_dia_125mm_triangular.png}
+			            \caption{Equivalent Stress (Hole diameter 125 mm, Triangular mesh)}
+		            \end{figure}
+		      \item \begin{figure} [H]
+			            \centering
+			            \includegraphics[width=\textwidth]{Images/maximum_principal_stress_dia_125mm_triangular.png}
+			            \caption{Maximum Principal Stress (Hole diameter 125 mm, Triangular mesh)}
+		            \end{figure}
+	      \end{itemize}
+	\item [g.] The results are consistent with the expectation. The maximum stress has increased significantly with the increase in hole diameter, which is in line with the understanding of stress concentration around holes. The deformation has also increased, which is expected due to the larger hole reducing the effective cross-sectional area of the material, leading to higher strains under the same load.
+\end{itemize}
+
+\end{document}
