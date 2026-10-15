@@ -1,0 +1,215 @@
+\documentclass{article}
+
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{eulervm}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{mathpazo}
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts, amsmath, amssymb}
+
+\setstretch{1.50}
+\geometry{paper=letterpaper, layout=letterpaper, margin=1in}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \vspace*{2cm}
+        {\Huge \textbf{ ME 4638: Computational Mechanics Lab}} \\
+        \vspace{1cm}
+        {\Large \textbf{Assignment II}} \\
+
+        \vfill
+
+        \textit{\large Submitted by:} \\
+        \vspace{0.3cm}
+        \textbf{Abdullah al Azmi} \\
+        \textbf{ID: 220011230} \\
+
+        \vfill
+
+        \textit{\large Submitted to:} \\
+        \vspace{0.3cm}
+        \textbf{\Large Sefat Mahmud Siddique (Junior Lecturer)} \\
+        \textbf{Department of Mechanical and Production Engineering} \\
+
+        \vfill
+
+        \textbf{Date of Submission: \today}
+        \vspace*{1cm}
+    \end{center}
+\end{titlepage}
+
+\newpage
+
+\setcounter{section}{3}
+
+\section{Prediction}
+
+\begin{itemize}
+    \item [a.] A fixed constraint is mandatory to prevent Rigid Body Motion (RBM). Without at least one constraint the structure would fly off into space infinitely under the applied external forces.
+    \item [b.] Hexahedral elements are difficult to map onto cylindrical geometries like the post. This often leads to highly distorted elements or mesh failure.
+    \item [c.] To solve the problem, one should use tetrahedral elements or multizone meshing instead, which can better conform to cylindrical geometries.
+    \item [d.] The choice of 5 inches for both components is a balance between computational cost and accuracy. It ensures there are enough elements to capture the stress distribution without making the problem too large to solve efficiently.
+    \item [e.] The constraint must be placed at the base of the steel post (Fixed Support). This replicates the real-world scenario where the post is anchored to the ground, providing a realistic boundary condition for the analysis.
+    \item [f \& g.] The expected deformation for weight of the sign and the spatially varying wind pressure is given below:
+          \begin{figure} [H]
+              \centering
+              \includegraphics[width=0.8\textwidth]{Images/rough_sketch.png}
+              \caption{Rough sketch of the expected structure deformation and location of max. stress and point of failure.}
+          \end{figure}
+    \item[h.] The maximum stress is expected to occur at the base of the post where it is fixed, due to the bending moment caused by the wind load and the weight of the sign. The point of failure is likely to be at this location as well, as it will experience the highest stress concentration.
+\end{itemize}
+
+\section{Analysis Results}
+
+\begin{itemize}
+    \item [a.] The screenshots of the required solution fields are shown below:
+          \begin{itemize}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.8\textwidth]{Images/total_deformation.png}
+                        \caption{Total deformation of the structure under the applied loads.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.8\textwidth]{Images/normal_stress_at_x_direction.png}
+                        \caption{Normal stress distribution at X-direction in the structure.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=\textwidth]{Images/normal_stress_at_y_direction.png}
+                        \caption{Normal stress distribution at Y-direction in the structure.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=\textwidth]{Images/normal_stress_at_z_direction.png}
+                        \caption{Normal stress distribution at Z-direction in the structure.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=\textwidth]{Images/max_shear_stress.png}
+                        \caption{Maximum shear stress distribution in the structure.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=\textwidth]{Images/equivalent_stress.png}
+                        \caption{Equivalent stress distribution in the structure.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=\textwidth]{Images/max_shear_stress_fos.png} % TODO: Have to add new image
+                        \caption{Factor of safety against shear failure.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=\textwidth]{Images/max_tensile_stress_fos.png} % TODO: Have to add new image
+                        \caption{Factor of safety against tensile stress failure.}
+                    \end{figure}
+          \end{itemize}
+    \item [b.] The equivalent stress and normal stress at Z-direction shows the maximum stress value. This is because the vertical loads and bending moments create significant longitudinal stress in the post.
+    \item [c.] Equivalent shear stress is a useful metric for ductile materials like (steel and aluminum) as it combines all stress components into a single value to compare against the tensile yield strength. However, since separate shear and normal strength are provided, a maximum shear stress theory might be more conservative and specific for this analysis.
+    \item [d.] A 3 times mesh refinement has been added at the region of maximum stress.
+    \item [e.] The stress values specially the normal stress at X-direction has changed significantly from max 7715.5 psi to 9871.7 psi. Also, the other stress values have changed slightly.
+    \item [f.] The factor of safety (FOS) is calculated as FOS = (material yield strength) / (maximum equivalent stress). Using the reported maximum equivalent stress from the analysis and the chosen material yield strength, the minimum FOS in the critical region was found to be less than 1.0, indicating the design remains unsafe.
+\end{itemize}
+
+\section{Post Design}
+
+\begin{itemize}
+    \item [a \& b.] The material for the sign has been changed, and I chose Galvanized Steel (Structural A36/Equivalent) with a density of 7850 kg/m$^3$. The young's modulus is 200 GPa, poisson's ratio is 0.3, tensile yield strength is 250 MPa, and yield strength is 250 MPa. Also, the materials has ultimate tensile strength of 400 MPa. This material is chosen because it has good strength, durability, and corrosion resistance, making it suitable for outdoor applications like signposts.
+    \item [c.] The screenshots of the required solution fields for the new material are shown below:
+          \begin{itemize}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=\textwidth]{Images/total_deformation_galvanized_steel.png}
+                        \caption{Total deformation of the structure with galvanized steel material.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=\textwidth]{Images/normal_stress_at_x_direction_galvanized_steel.png}
+                        \caption{Normal stress distribution at X-direction with galvanized steel material.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=\textwidth]{Images/normal_stress_at_y_direction_galvanized_steel.png}
+                        \caption{Normal stress distribution at Y-direction with galvanized steel material.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=\textwidth]{Images/normal_stress_at_z_direction_galvanized_steel.png}
+                        \caption{Normal stress distribution at Z-direction with galvanized steel material.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=\textwidth]{Images/max_shear_stress_galvanized_steel.png}
+                        \caption{Maximum shear stress distribution with galvanized steel material.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=\textwidth]{Images/equivalent_stress_galvanized_steel.png}
+                        \caption{Equivalent stress distribution with galvanized steel material.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=\textwidth]{Images/max_shear_stress_fos_galvanized_steel.png}
+                        \caption{Factor of safety against shear failure with galvanized steel material.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=\textwidth]{Images/max_tensile_stress_fos_galvanized_steel.png}
+                        \caption{Factor of safety against tensile stress failure with galvanized steel material.}
+                    \end{figure}
+          \end{itemize}
+\end{itemize}
+
+\section{Different Loading Scenarios}
+
+\begin{itemize}
+    \item [a.] The loading (1) was an impact load of 1200lbf in the negative Y-direction and the loading (2) was an load of 400 lbf at the top of the sign in the negative Z-direction.
+    \item [b.] Loading (1) models a realistic dynamic impact scenario, such as minor low-velocity maintenance vehicle contact or localized collision at the outer edge face of the signplate. This generates high eccentric bending moments and sudden torsional loads on the primary supporting post structure.
+    \item [c.] Loading (2) acts vertically downward to simulate severe environmental ice accumulation during a winter storm. This increases the total dead load weight distribution over the upper surface area components, simulating critical localized vertical stress accumulation.
+    \item [d.] The screenshots of the required solution fields for the new loading conditions are shown below:
+          \begin{itemize}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.8\textwidth]{Images/total_load_and_constraints.png}
+                        \caption{Total deformation of the structure under impact load.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.8\textwidth]{Images/total_deformation_impact_load.png}
+                        \caption{Total deformation of the structure under impact load.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.8\textwidth]{Images/normal_stress_at_z_direction_impact_load.png}
+                        \caption{Normal stress distribution at Z-direction under impact load.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.8\textwidth]{Images/max_shear_stress_impact_load.png}
+                        \caption{Maximum shear stress distribution under impact load.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.8\textwidth]{Images/max_shear_stress_fos_impact_load.png}
+                        \caption{Factor of safety against shear failure under impact load.}
+                    \end{figure}
+              \item[] \begin{figure} [H]
+                        \centering
+                        \includegraphics[width=0.8\textwidth]{Images/max_tensile_stress_fos_impact_load.png}
+                        \caption{Factor of safety against tensile stress failure under impact load.}
+                    \end{figure}
+          \end{itemize}
+    \item[e.] The maximum stress induced under loading scenario (1) remains safely below the designated structural yield limit criteria. Therefore, the signpost assembly will not fail, exhibiting a minimum calculated safety factor greater than 1.0.
+    \item[f.] The additional gravitational forces from loading scenario (2) result in small vertical compressive stresses that do not challenge the structural limits. The design preserves mechanical safety margins, confirming that failure will not occur under these environmental loading conditions.
+\end{itemize}
+
+\end{document}
