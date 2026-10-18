@@ -146,7 +146,7 @@
 
           \begin{figure}[H]
               \centering
-              \includegraphics[width=1\textwidth]{Images/stream_function_plot.pdf}
+              \includegraphics[width=1\textwidth]{images/stream_function_plot.pdf}
               \caption{Stream Function Contours for $C$ varying from -230 to 230}
               \label{fig:stream_function}
           \end{figure}
@@ -238,7 +238,7 @@ Therefore, the equation of the streamline that passes through the stagnation poi
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.6\textwidth]{Images/laminar_flow_image_horizontal.jpg}
+    \includegraphics[width=0.6\textwidth]{images/laminar_flow_image_horizontal.jpg}
     \caption{Fluid Flow (Water) Captured from Tap to Basin}
     \label{fig:fluid_flow}
 \end{figure}
@@ -249,18 +249,18 @@ Therefore, the equation of the streamline that passes through the stagnation poi
 
     \item [\textbf{(ii)}] The flow is laminar because the water stream appears smooth and orderly without any visible turbulence or chaotic motion, which are characteristic features of laminar flow.
 
-    \item [\textbf{(iii)}] To justify whether the flow is steady or unsteady, I have captured a video of 10 seconds of the same flow and analyzed multiple frames of the video using OpenCV library in python. I positioned 10 virtual markers on the water stream in the video frames and tracked their pixel density over time. I observed that the pixel density of these markers remained almost constant throughout the video frames, indicating that the flow characteristics did not change significantly over time. This consistency in pixel density suggests that the flow is steady, as there are no noticeable fluctuations or variations in the flow pattern over the observed period. The analysis is shown in Images~\ref{fig:marker_positions} and~\ref{fig:heatmap}.
+    \item [\textbf{(iii)}] To justify whether the flow is steady or unsteady, I have captured a video of 10 seconds of the same flow and analyzed multiple frames of the video using OpenCV library in python. I positioned 10 virtual markers on the water stream in the video frames and tracked their pixel density over time. I observed that the pixel density of these markers remained almost constant throughout the video frames, indicating that the flow characteristics did not change significantly over time. This consistency in pixel density suggests that the flow is steady, as there are no noticeable fluctuations or variations in the flow pattern over the observed period. The analysis is shown in images~\ref{fig:marker_positions} and~\ref{fig:heatmap}.
 
           \begin{figure}[H]
               \centering
-              \includegraphics[width=0.8\textwidth]{Images/marked_coordinates_in_first_frame.pdf}
+              \includegraphics[width=0.8\textwidth]{images/marked_coordinates_in_first_frame.pdf}
               \caption{Marker Positions on Flow for Pixel Density Tracking}
               \label{fig:marker_positions}
           \end{figure}
 
           \begin{figure}[H]
               \centering
-              \includegraphics[width=0.8\textwidth]{Images/heatmap_of_different_frame_and_coordinates.pdf}
+              \includegraphics[width=0.8\textwidth]{images/heatmap_of_different_frame_and_coordinates.pdf}
               \caption{Steady Flow Analysis using Pixel Density Heatmap}
               \label{fig:heatmap}
           \end{figure}
