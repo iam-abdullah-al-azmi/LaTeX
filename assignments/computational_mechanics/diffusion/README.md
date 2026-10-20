@@ -4,16 +4,23 @@
 
 ## Mathematical Model
 
-Forward:
+Finite Difference Method
+
+Forward Difference Method:
 $$\frac{d\Phi}{dx} \approx \frac{\Phi_{i+1} - \Phi_i}{\Delta x}$$
 
-Backward:
+Backward Difference Method:
 $$\frac{d\Phi}{dx} \approx \frac{\Phi_i - \Phi_{i-1}}{\Delta x}$$
 
-Central:
+Central Difference Method:
 $$\frac{d\Phi}{dx} \approx \frac{\Phi_{i+1} - \Phi_{i-1}}{2\Delta x}$$
 
+Mathematical Notation:
 $$\Phi(x_{i+1}) = \Phi(x_i + \Delta x) = \Phi_{i+1}$$
+$$\Phi(x_{i}) = \Phi(x_i) = \Phi_{i}$$
+$$\Phi(x_{i-1}) = \Phi(x_i - \Delta x) = \Phi_{i-1}$$
+
+Taylor Series Expansion:
 
 $$\Phi(x_i + \Delta x) = \Phi(x_i) + \frac{d\Phi}{dx}\Delta x + \frac{d^2\Phi}{dx^2}\frac{\Delta x^2}{2} + \frac{d^3\Phi}{dx^3}\frac{\Delta x^3}{6} + \dots$$
 
@@ -28,6 +35,24 @@ $$\Phi(x_i - \Delta x) = \Phi(x_i) - \frac{d\Phi}{dx}\Delta x + \frac{d^2\Phi}{d
 $$\Rightarrow \frac{d^2\Phi}{dx^2} = \frac{\Phi_{i+1} - 2\Phi_i + \Phi_{i-1}}{\Delta x^2}$$
 
 ---
+
+````mermaid
+flowchart TD
+    subgraph Row 2 [j = 2]
+        N8["(0,2) -> ID: 8"] --- N9["(1,2) -> ID: 9"] --- N10["(2,2) -> ID: 10"] --- N11["(3,2) -> ID: 11"]
+    end
+    subgraph Row 1 [j = 1]
+        N4["(0,1) -> ID: 4"] --- N5["(1,1) -> ID: 5"] --- N6["(2,1) -> ID: 6"] --- N7["(3,1) -> ID: 7"]
+    end
+    subgraph Row 0 [j = 0]
+        N0["(0,0) -> ID: 0"] --- N1["(1,0) -> ID: 1"] --- N2["(2,0) -> ID: 2"] --- N3["(3,0) -> ID: 3"]
+    end
+
+    N8 --- N4 --- N0
+    N9 --- N5 --- N1
+    N10 --- N6 --- N2
+    N11 --- N7 --- N3
+    ```
 
 $$\frac{d\Phi}{dx} = 6x + \frac{d^2\Phi}{dx^2}$$
 
@@ -494,3 +519,4 @@ $$C = \frac{u\Delta t}{\Delta x}$$
 ## Coding Implementation
 
 ## Conclusion
+````
