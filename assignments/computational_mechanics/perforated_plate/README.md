@@ -1,4 +1,4 @@
-# Finite Element Analysis of Stress Concentration in a Perforated Plate Under Tensile Loading
+# Finite Element Analysis of Stress Concentration in a Perforated Plate Under Tension: Effect of Mesh Size and Element Type
 
 ## Summary
 
@@ -21,91 +21,91 @@ The plate is analysed with the default mesh and four refined meshes at two press
 
 Quad-dominant mesh with the Ansys default element size of 30.115 mm and no face sizing. This is the baseline.
 
-| Setting |                          Image                           |
-| :-----: | :------------------------------------------------------: |
+| Setting |                   Image                   |
+| :-----: | :---------------------------------------: |
 |  Mesh   |  ![Mesh](images/default_100kpa_mesh.png)  |
 |  Model  | ![Model](images/default_100kpa_model.png) |
 
-|          Result          |                                     Image                                     |
-| :----------------------: | :---------------------------------------------------------------------------: |
-|    Total Deformation     | ![Total Deformation](images/default_100kpa_total_deformation.png) |
-|    Equivalent Stress     |       ![Equivalent Stress](images/default_100kpa_equivalent_stress.png)       |
-| Maximum Principal Stress |   ![Maximum Principal Stress](images/default_100kpa_max_principal_stress.png)    |
-| Minimum Principal Stress |   ![Minimum Principal Stress](images/default_100kpa_min_principal_stress.png)    |
-|   Maximum Shear Stress   |     ![Maximum Shear Stress](images/default_100kpa_max_shear_stress.png)      |
-|      Strain Energy       |         ![Strain Energy](images/default_100kpa_strain_energy.png)         |
+|          Result          |                                    Image                                    |
+| :----------------------: | :-------------------------------------------------------------------------: |
+|    Total Deformation     |      ![Total Deformation](images/default_100kpa_total_deformation.png)      |
+|    Equivalent Stress     |      ![Equivalent Stress](images/default_100kpa_equivalent_stress.png)      |
+| Maximum Principal Stress | ![Maximum Principal Stress](images/default_100kpa_max_principal_stress.png) |
+| Minimum Principal Stress | ![Minimum Principal Stress](images/default_100kpa_min_principal_stress.png) |
+|   Maximum Shear Stress   |     ![Maximum Shear Stress](images/default_100kpa_max_shear_stress.png)     |
+|      Strain Energy       |          ![Strain Energy](images/default_100kpa_strain_energy.png)          |
 
 #### Optimization 1: 10 mm Quadrilateral Mesh
 
 Quad-dominant mesh with a 10 mm face sizing applied to the plate face.
 
-| Setting |                         Image                         |
-| :-----: | :---------------------------------------------------: |
-|  Mesh   | ![Mesh](images/quad_10mm_100kpa_mesh.png)  |
+| Setting |                    Image                    |
+| :-----: | :-----------------------------------------: |
+|  Mesh   |  ![Mesh](images/quad_10mm_100kpa_mesh.png)  |
 |  Model  | ![Model](images/quad_10mm_100kpa_model.png) |
 
-|          Result          |                                  Image                                   |
-| :----------------------: | :----------------------------------------------------------------------: |
-|    Total Deformation     |    ![Total Deformation](images/quad_10mm_100kpa_total_deformation.png)     |
-|    Equivalent Stress     |    ![Equivalent Stress](images/quad_10mm_100kpa_equivalent_stress.png)     |
+|          Result          |                                     Image                                     |
+| :----------------------: | :---------------------------------------------------------------------------: |
+|    Total Deformation     |      ![Total Deformation](images/quad_10mm_100kpa_total_deformation.png)      |
+|    Equivalent Stress     |      ![Equivalent Stress](images/quad_10mm_100kpa_equivalent_stress.png)      |
 | Maximum Principal Stress | ![Maximum Principal Stress](images/quad_10mm_100kpa_max_principal_stress.png) |
 | Minimum Principal Stress | ![Minimum Principal Stress](images/quad_10mm_100kpa_min_principal_stress.png) |
-|   Maximum Shear Stress   |   ![Maximum Shear Stress](images/quad_10mm_100kpa_max_shear_stress.png)   |
-|      Strain Energy       |      ![Strain Energy](images/quad_10mm_100kpa_strain_energy.png)       |
+|   Maximum Shear Stress   |     ![Maximum Shear Stress](images/quad_10mm_100kpa_max_shear_stress.png)     |
+|      Strain Energy       |          ![Strain Energy](images/quad_10mm_100kpa_strain_energy.png)          |
 
 #### Optimization 2: 2.5 mm Quadrilateral Mesh
 
 Quad-dominant mesh with a 2.5 mm face sizing applied to the plate face, the finest mesh in this study.
 
-| Setting |                         Image                         |
-| :-----: | :---------------------------------------------------: |
-|  Mesh   | ![Mesh](images/quad_2p5mm_100kpa_mesh.png)  |
+| Setting |                    Image                     |
+| :-----: | :------------------------------------------: |
+|  Mesh   |  ![Mesh](images/quad_2p5mm_100kpa_mesh.png)  |
 |  Model  | ![Model](images/quad_2p5mm_100kpa_model.png) |
 
-|          Result          |                                  Image                                   |
-| :----------------------: | :----------------------------------------------------------------------: |
-|    Total Deformation     |    ![Total Deformation](images/quad_2p5mm_100kpa_total_deformation.png)     |
-|    Equivalent Stress     |    ![Equivalent Stress](images/quad_2p5mm_100kpa_equivalent_stress.png)     |
+|          Result          |                                     Image                                      |
+| :----------------------: | :----------------------------------------------------------------------------: |
+|    Total Deformation     |      ![Total Deformation](images/quad_2p5mm_100kpa_total_deformation.png)      |
+|    Equivalent Stress     |      ![Equivalent Stress](images/quad_2p5mm_100kpa_equivalent_stress.png)      |
 | Maximum Principal Stress | ![Maximum Principal Stress](images/quad_2p5mm_100kpa_max_principal_stress.png) |
 | Minimum Principal Stress | ![Minimum Principal Stress](images/quad_2p5mm_100kpa_min_principal_stress.png) |
-|   Maximum Shear Stress   |   ![Maximum Shear Stress](images/quad_2p5mm_100kpa_max_shear_stress.png)   |
-|      Strain Energy       |      ![Strain Energy](images/quad_2p5mm_100kpa_strain_energy.png)       |
+|   Maximum Shear Stress   |     ![Maximum Shear Stress](images/quad_2p5mm_100kpa_max_shear_stress.png)     |
+|      Strain Energy       |          ![Strain Energy](images/quad_2p5mm_100kpa_strain_energy.png)          |
 
 #### Optimization 3: 10 mm Triangular Mesh
 
 Triangular mesh method with a 10 mm face sizing, used to compare element shape against the 10 mm quadrilateral mesh.
 
-| Setting |                         Image                         |
-| :-----: | :---------------------------------------------------: |
-|  Mesh   | ![Mesh](images/tri_10mm_100kpa_mesh.png)  |
+| Setting |                    Image                     |
+| :-----: | :------------------------------------------: |
+|  Mesh   |   ![Mesh](images/tri_10mm_100kpa_mesh.png)   |
 |  Model  | ![Model](images/quad_2p5mm_100kpa_model.png) |
 
-|          Result          |                                  Image                                   |
-| :----------------------: | :----------------------------------------------------------------------: |
-|    Total Deformation     |    ![Total Deformation](images/tri_10mm_100kpa_total_deformation.png)     |
-|    Equivalent Stress     |    ![Equivalent Stress](images/tri_10mm_100kpa_equivalent_stress.png)     |
+|          Result          |                                    Image                                     |
+| :----------------------: | :--------------------------------------------------------------------------: |
+|    Total Deformation     |      ![Total Deformation](images/tri_10mm_100kpa_total_deformation.png)      |
+|    Equivalent Stress     |      ![Equivalent Stress](images/tri_10mm_100kpa_equivalent_stress.png)      |
 | Maximum Principal Stress | ![Maximum Principal Stress](images/tri_10mm_100kpa_max_principal_stress.png) |
 | Minimum Principal Stress | ![Minimum Principal Stress](images/tri_10mm_100kpa_min_principal_stress.png) |
-|   Maximum Shear Stress   |   ![Maximum Shear Stress](images/tri_10mm_100kpa_max_shear_stress.png)   |
-|      Strain Energy       |      ![Strain Energy](images/tri_10mm_100kpa_strain_energy.png)       |
+|   Maximum Shear Stress   |     ![Maximum Shear Stress](images/tri_10mm_100kpa_max_shear_stress.png)     |
+|      Strain Energy       |          ![Strain Energy](images/tri_10mm_100kpa_strain_energy.png)          |
 
 #### Optimization 4: 2.5 mm Triangular Mesh
 
 Triangular mesh method with a 2.5 mm face sizing, used to compare element shape against the 2.5 mm quadrilateral mesh.
 
-| Setting |                         Image                         |
-| :-----: | :---------------------------------------------------: |
-|  Mesh   | ![Mesh](images/tri_2p5mm_100kpa_mesh.png)  |
+| Setting |                    Image                     |
+| :-----: | :------------------------------------------: |
+|  Mesh   |  ![Mesh](images/tri_2p5mm_100kpa_mesh.png)   |
 |  Model  | ![Model](images/quad_2p5mm_100kpa_model.png) |
 
-|          Result          |                                  Image                                   |
-| :----------------------: | :----------------------------------------------------------------------: |
-|    Total Deformation     |    ![Total Deformation](images/tri_2p5mm_100kpa_total_deformation.png)     |
-|    Equivalent Stress     |    ![Equivalent Stress](images/tri_2p5mm_100kpa_equivalent_stress.png)     |
+|          Result          |                                     Image                                     |
+| :----------------------: | :---------------------------------------------------------------------------: |
+|    Total Deformation     |      ![Total Deformation](images/tri_2p5mm_100kpa_total_deformation.png)      |
+|    Equivalent Stress     |      ![Equivalent Stress](images/tri_2p5mm_100kpa_equivalent_stress.png)      |
 | Maximum Principal Stress | ![Maximum Principal Stress](images/tri_2p5mm_100kpa_max_principal_stress.png) |
 | Minimum Principal Stress | ![Minimum Principal Stress](images/tri_2p5mm_100kpa_min_principal_stress.png) |
-|   Maximum Shear Stress   |   ![Maximum Shear Stress](images/tri_2p5mm_100kpa_max_shear_stress.png)   |
-|      Strain Energy       |      ![Strain Energy](images/tri_2p5mm_100kpa_strain_energy.png)       |
+|   Maximum Shear Stress   |     ![Maximum Shear Stress](images/tri_2p5mm_100kpa_max_shear_stress.png)     |
+|      Strain Energy       |          ![Strain Energy](images/tri_2p5mm_100kpa_strain_energy.png)          |
 
 ### Pressure: 200 kPa
 
@@ -115,96 +115,96 @@ The pressure is doubled and the same five meshes are repeated. The meshes and th
 
 Quad-dominant mesh with the Ansys default element size of 30.115 mm and no face sizing. This is the baseline.
 
-| Setting |                         Image                         |
-| :-----: | :---------------------------------------------------: |
-|  Mesh   | ![Mesh](images/default_200kpa_mesh.png)  |
+| Setting |                   Image                   |
+| :-----: | :---------------------------------------: |
+|  Mesh   |  ![Mesh](images/default_200kpa_mesh.png)  |
 |  Model  | ![Model](images/default_200kpa_model.png) |
 
-|          Result          |                                  Image                                   |
-| :----------------------: | :----------------------------------------------------------------------: |
-|    Total Deformation     |    ![Total Deformation](images/default_200kpa_total_deformation.png)     |
-|    Equivalent Stress     |    ![Equivalent Stress](images/default_200kpa_equivalent_stress.png)     |
+|          Result          |                                    Image                                    |
+| :----------------------: | :-------------------------------------------------------------------------: |
+|    Total Deformation     |      ![Total Deformation](images/default_200kpa_total_deformation.png)      |
+|    Equivalent Stress     |      ![Equivalent Stress](images/default_200kpa_equivalent_stress.png)      |
 | Maximum Principal Stress | ![Maximum Principal Stress](images/default_200kpa_max_principal_stress.png) |
 | Minimum Principal Stress | ![Minimum Principal Stress](images/default_200kpa_min_principal_stress.png) |
-|   Maximum Shear Stress   |   ![Maximum Shear Stress](images/default_200kpa_max_shear_stress.png)   |
-|      Strain Energy       |      ![Strain Energy](images/default_200kpa_strain_energy.png)       |
+|   Maximum Shear Stress   |     ![Maximum Shear Stress](images/default_200kpa_max_shear_stress.png)     |
+|      Strain Energy       |          ![Strain Energy](images/default_200kpa_strain_energy.png)          |
 
 #### Optimization 1: 10 mm Quadrilateral Mesh
 
 Quad-dominant mesh with a 10 mm face sizing applied to the plate face.
 
-| Setting |                        Image                         |
-| :-----: | :--------------------------------------------------: |
-|  Mesh   | ![Mesh](images/quad_10mm_200kpa_mesh.png) |
+| Setting |                    Image                    |
+| :-----: | :-----------------------------------------: |
+|  Mesh   |  ![Mesh](images/quad_10mm_200kpa_mesh.png)  |
 |  Model  | ![Model](images/quad_10mm_100kpa_model.png) |
 
-|          Result          |                                  Image                                   |
-| :----------------------: | :----------------------------------------------------------------------: |
-|    Total Deformation     |    ![Total Deformation](images/quad_10mm_200kpa_total_deformation.png)     |
-|    Equivalent Stress     |    ![Equivalent Stress](images/quad_10mm_200kpa_equivalent_stress.png)     |
+|          Result          |                                     Image                                     |
+| :----------------------: | :---------------------------------------------------------------------------: |
+|    Total Deformation     |      ![Total Deformation](images/quad_10mm_200kpa_total_deformation.png)      |
+|    Equivalent Stress     |      ![Equivalent Stress](images/quad_10mm_200kpa_equivalent_stress.png)      |
 | Maximum Principal Stress | ![Maximum Principal Stress](images/quad_10mm_200kpa_max_principal_stress.png) |
 | Minimum Principal Stress | ![Minimum Principal Stress](images/quad_10mm_200kpa_min_principal_stress.png) |
-|   Maximum Shear Stress   |   ![Maximum Shear Stress](images/quad_10mm_200kpa_max_shear_stress.png)   |
-|      Strain Energy       |      ![Strain Energy](images/quad_10mm_200kpa_strain_energy.png)       |
+|   Maximum Shear Stress   |     ![Maximum Shear Stress](images/quad_10mm_200kpa_max_shear_stress.png)     |
+|      Strain Energy       |          ![Strain Energy](images/quad_10mm_200kpa_strain_energy.png)          |
 
 #### Optimization 2: 2.5 mm Quadrilateral Mesh
 
 Quad-dominant mesh with a 2.5 mm face sizing applied to the plate face, the finest mesh in this study.
 
-| Setting |       Image       |
-| :-----: | :---------------: |
-|  Mesh   | ![Mesh](images/quad_2p5mm_100kpa_mesh.png) |
+| Setting |                    Image                     |
+| :-----: | :------------------------------------------: |
+|  Mesh   |  ![Mesh](images/quad_2p5mm_100kpa_mesh.png)  |
 |  Model  | ![Model](images/quad_2p5mm_100kpa_model.png) |
 
-|          Result          |                                  Image                                   |
-| :----------------------: | :----------------------------------------------------------------------: |
-|    Total Deformation     |    ![Total Deformation](images/quad_2p5mm_200kpa_total_deformation.png)     |
-|    Equivalent Stress     |    ![Equivalent Stress](images/quad_2p5mm_200kpa_equivalent_stress.png)     |
+|          Result          |                                     Image                                      |
+| :----------------------: | :----------------------------------------------------------------------------: |
+|    Total Deformation     |      ![Total Deformation](images/quad_2p5mm_200kpa_total_deformation.png)      |
+|    Equivalent Stress     |      ![Equivalent Stress](images/quad_2p5mm_200kpa_equivalent_stress.png)      |
 | Maximum Principal Stress | ![Maximum Principal Stress](images/quad_2p5mm_200kpa_max_principal_stress.png) |
 | Minimum Principal Stress | ![Minimum Principal Stress](images/quad_2p5mm_200kpa_min_principal_stress.png) |
-|   Maximum Shear Stress   |   ![Maximum Shear Stress](images/quad_2p5mm_200kpa_max_shear_stress.png)   |
-|      Strain Energy       |      ![Strain Energy](images/quad_2p5mm_200kpa_strain_energy.png)       |
+|   Maximum Shear Stress   |     ![Maximum Shear Stress](images/quad_2p5mm_200kpa_max_shear_stress.png)     |
+|      Strain Energy       |          ![Strain Energy](images/quad_2p5mm_200kpa_strain_energy.png)          |
 
 #### Optimization 3: 10 mm Triangular Mesh
 
 Triangular mesh method with a 10 mm face sizing, used to compare element shape against the 10 mm quadrilateral mesh.
 
-| Setting |       Image       |
-| :-----: | :---------------: |
-|  Mesh   | ![Mesh](images/tri_10mm_100kpa_mesh.png) |
+| Setting |                    Image                     |
+| :-----: | :------------------------------------------: |
+|  Mesh   |   ![Mesh](images/tri_10mm_100kpa_mesh.png)   |
 |  Model  | ![Model](images/quad_2p5mm_100kpa_model.png) |
 
-|          Result          |                                  Image                                   |
-| :----------------------: | :----------------------------------------------------------------------: |
-|    Total Deformation     |    ![Total Deformation](images/tri_10mm_200kpa_total_deformation.png)     |
-|    Equivalent Stress     |    ![Equivalent Stress](images/tri_10mm_200kpa_equivalent_stress.png)     |
+|          Result          |                                    Image                                     |
+| :----------------------: | :--------------------------------------------------------------------------: |
+|    Total Deformation     |      ![Total Deformation](images/tri_10mm_200kpa_total_deformation.png)      |
+|    Equivalent Stress     |      ![Equivalent Stress](images/tri_10mm_200kpa_equivalent_stress.png)      |
 | Maximum Principal Stress | ![Maximum Principal Stress](images/tri_10mm_200kpa_max_principal_stress.png) |
 | Minimum Principal Stress | ![Minimum Principal Stress](images/tri_10mm_200kpa_min_principal_stress.png) |
-|   Maximum Shear Stress   |   ![Maximum Shear Stress](images/tri_10mm_200kpa_max_shear_stress.png)   |
-|      Strain Energy       |      ![Strain Energy](images/tri_10mm_200kpa_strain_energy.png)       |
+|   Maximum Shear Stress   |     ![Maximum Shear Stress](images/tri_10mm_200kpa_max_shear_stress.png)     |
+|      Strain Energy       |          ![Strain Energy](images/tri_10mm_200kpa_strain_energy.png)          |
 
 #### Optimization 4: 2.5 mm Triangular Mesh
 
 Triangular mesh method with a 2.5 mm face sizing, used to compare element shape against the 2.5 mm quadrilateral mesh.
 
-| Setting |       Image       |
-| :-----: | :---------------: |
-|  Mesh   | ![Mesh](images/tri_2p5mm_100kpa_mesh.png) |
+| Setting |                    Image                     |
+| :-----: | :------------------------------------------: |
+|  Mesh   |  ![Mesh](images/tri_2p5mm_100kpa_mesh.png)   |
 |  Model  | ![Model](images/quad_2p5mm_100kpa_model.png) |
 
-|          Result          |                                  Image                                   |
-| :----------------------: | :----------------------------------------------------------------------: |
-|    Total Deformation     |    ![Total Deformation](images/tri_2p5mm_200kpa_total_deformation.png)     |
-|    Equivalent Stress     |    ![Equivalent Stress](images/tri_2p5mm_200kpa_equivalent_stress.png)     |
+|          Result          |                                     Image                                     |
+| :----------------------: | :---------------------------------------------------------------------------: |
+|    Total Deformation     |      ![Total Deformation](images/tri_2p5mm_200kpa_total_deformation.png)      |
+|    Equivalent Stress     |      ![Equivalent Stress](images/tri_2p5mm_200kpa_equivalent_stress.png)      |
 | Maximum Principal Stress | ![Maximum Principal Stress](images/tri_2p5mm_200kpa_max_principal_stress.png) |
 | Minimum Principal Stress | ![Minimum Principal Stress](images/tri_2p5mm_200kpa_min_principal_stress.png) |
-|   Maximum Shear Stress   |   ![Maximum Shear Stress](images/tri_2p5mm_200kpa_max_shear_stress.png)   |
-|      Strain Energy       |      ![Strain Energy](images/tri_2p5mm_200kpa_strain_energy.png)       |
+|   Maximum Shear Stress   |     ![Maximum Shear Stress](images/tri_2p5mm_200kpa_max_shear_stress.png)     |
+|      Strain Energy       |          ![Strain Energy](images/tri_2p5mm_200kpa_strain_energy.png)          |
 
 ## Software Used
 
-|                 Purpose                  |              Name               |
-| :--------------------------------------: | :-----------------------------: |
+|                 Purpose                  |                Name                 |
+| :--------------------------------------: | :---------------------------------: |
 | Design and Finite Element Analysis (FEA) | Ansys (Student Version 2026 R1) [7] |
 
 ## Limitations
@@ -233,10 +233,10 @@ I am really grateful to our faculty member, Sefat Mahmud Siddique, Junior Lectur
 
 ## References
 
-1. W. D. Pilkey, D. F. Pilkey and Z. Bi, *Peterson's Stress Concentration Factors*, 4th ed. Hoboken, NJ, USA: Wiley, 2020.
-2. S. P. Timoshenko and J. N. Goodier, *Theory of Elasticity*, 3rd ed. New York, NY, USA: McGraw-Hill, 1970.
-3. G. Kirsch, "Die Theorie der Elastizität und die Bedürfnisse der Festigkeitslehre," *Zeitschrift des Vereines Deutscher Ingenieure*, vol. 42, pp. 797-807, 1898.
-4. R. D. Cook, D. S. Malkus, M. E. Plesha and R. J. Witt, *Concepts and Applications of Finite Element Analysis*, 4th ed. New York, NY, USA: Wiley, 2002.
-5. O. C. Zienkiewicz, R. L. Taylor and J. Z. Zhu, *The Finite Element Method: Its Basis and Fundamentals*, 7th ed. Oxford, UK: Butterworth-Heinemann, 2013.
-6. R. C. Howland, "On the stresses in the neighbourhood of a circular hole in a strip under tension," *Philosophical Transactions of the Royal Society of London, Series A*, vol. 229, pp. 49-86, 1930.
-7. Ansys, Inc., *Ansys Mechanical User's Guide*, Release 2026 R1. Canonsburg, PA, USA: Ansys, Inc., 2026.
+1. W. D. Pilkey, D. F. Pilkey and Z. Bi, _Peterson's Stress Concentration Factors_, 4th ed. Hoboken, NJ, USA: Wiley, 2020.
+2. S. P. Timoshenko and J. N. Goodier, _Theory of Elasticity_, 3rd ed. New York, NY, USA: McGraw-Hill, 1970.
+3. G. Kirsch, "Die Theorie der Elastizität und die Bedürfnisse der Festigkeitslehre," _Zeitschrift des Vereines Deutscher Ingenieure_, vol. 42, pp. 797-807, 1898.
+4. R. D. Cook, D. S. Malkus, M. E. Plesha and R. J. Witt, _Concepts and Applications of Finite Element Analysis_, 4th ed. New York, NY, USA: Wiley, 2002.
+5. O. C. Zienkiewicz, R. L. Taylor and J. Z. Zhu, _The Finite Element Method: Its Basis and Fundamentals_, 7th ed. Oxford, UK: Butterworth-Heinemann, 2013.
+6. R. C. Howland, "On the stresses in the neighbourhood of a circular hole in a strip under tension," _Philosophical Transactions of the Royal Society of London, Series A_, vol. 229, pp. 49-86, 1930.
+7. Ansys, Inc., _Ansys Mechanical User's Guide_, Release 2026 R1. Canonsburg, PA, USA: Ansys, Inc., 2026.
