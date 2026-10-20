@@ -13,9 +13,13 @@ Holes raise local stress above the nominal value, and fatigue cracks usually sta
 
 ## Finite Element Analysis
 
-### Analysis Settings
+The plate is analysed with the default mesh and four refined meshes at two pressures. Each case reports the mesh, the model with its boundary conditions, and six results.
 
-<!-- Default Mesh -->
+### Pressure: 100 kPa
+
+#### Default Mesh (Baseline)
+
+Quad-dominant mesh with the Ansys default element size of 30.115 mm and no face sizing. This is the baseline.
 
 | Setting |                          Image                           |
 | :-----: | :------------------------------------------------------: |
@@ -31,9 +35,9 @@ Holes raise local stress above the nominal value, and fatigue cracks usually sta
 |   Maximum Shear Stress   |     ![Maximum Shear Stress](images/default_100kpa_max_shear_stress.png)      |
 |      Strain Energy       |         ![Strain Energy](images/default_100kpa_strain_energy.png)         |
 
-## Optimization
+#### Optimization 1: 10 mm Quadrilateral Mesh
 
-<!-- Mesh: 10 mm -->
+Quad-dominant mesh with a 10 mm face sizing applied to the plate face.
 
 | Setting |                         Image                         |
 | :-----: | :---------------------------------------------------: |
@@ -49,7 +53,9 @@ Holes raise local stress above the nominal value, and fatigue cracks usually sta
 |   Maximum Shear Stress   |   ![Maximum Shear Stress](images/quad_10mm_100kpa_max_shear_stress.png)   |
 |      Strain Energy       |      ![Strain Energy](images/quad_10mm_100kpa_strain_energy.png)       |
 
-<!-- Mesh: 2.5 mm -->
+#### Optimization 2: 2.5 mm Quadrilateral Mesh
+
+Quad-dominant mesh with a 2.5 mm face sizing applied to the plate face, the finest mesh in this study.
 
 | Setting |                         Image                         |
 | :-----: | :---------------------------------------------------: |
@@ -65,7 +71,9 @@ Holes raise local stress above the nominal value, and fatigue cracks usually sta
 |   Maximum Shear Stress   |   ![Maximum Shear Stress](images/quad_2p5mm_100kpa_max_shear_stress.png)   |
 |      Strain Energy       |      ![Strain Energy](images/quad_2p5mm_100kpa_strain_energy.png)       |
 
-<!-- Mesh: Triangular 10 mm -->
+#### Optimization 3: 10 mm Triangular Mesh
+
+Triangular mesh method with a 10 mm face sizing, used to compare element shape against the 10 mm quadrilateral mesh.
 
 | Setting |                         Image                         |
 | :-----: | :---------------------------------------------------: |
@@ -81,7 +89,9 @@ Holes raise local stress above the nominal value, and fatigue cracks usually sta
 |   Maximum Shear Stress   |   ![Maximum Shear Stress](images/tri_10mm_100kpa_max_shear_stress.png)   |
 |      Strain Energy       |      ![Strain Energy](images/tri_10mm_100kpa_strain_energy.png)       |
 
-<!-- Mesh: Triangular 2.5 mm -->
+#### Optimization 4: 2.5 mm Triangular Mesh
+
+Triangular mesh method with a 2.5 mm face sizing, used to compare element shape against the 2.5 mm quadrilateral mesh.
 
 | Setting |                         Image                         |
 | :-----: | :---------------------------------------------------: |
@@ -97,9 +107,13 @@ Holes raise local stress above the nominal value, and fatigue cracks usually sta
 |   Maximum Shear Stress   |   ![Maximum Shear Stress](images/tri_2p5mm_100kpa_max_shear_stress.png)   |
 |      Strain Energy       |      ![Strain Energy](images/tri_2p5mm_100kpa_strain_energy.png)       |
 
-<!-- End: Pressure: 100 kPa -->
+### Pressure: 200 kPa
 
-<!-- Default Mesh, Pressure: 200 kPa -->
+The pressure is doubled and the same five meshes are repeated. The meshes and the model setup are identical to the 100 kPa case, so the 100 kPa mesh and model screenshots are reused wherever a separate 200 kPa screenshot was not taken.
+
+#### Default Mesh (Baseline)
+
+Quad-dominant mesh with the Ansys default element size of 30.115 mm and no face sizing. This is the baseline.
 
 | Setting |                         Image                         |
 | :-----: | :---------------------------------------------------: |
@@ -115,12 +129,14 @@ Holes raise local stress above the nominal value, and fatigue cracks usually sta
 |   Maximum Shear Stress   |   ![Maximum Shear Stress](images/default_200kpa_max_shear_stress.png)   |
 |      Strain Energy       |      ![Strain Energy](images/default_200kpa_strain_energy.png)       |
 
-<!-- Mesh: 10 mm -->
+#### Optimization 1: 10 mm Quadrilateral Mesh
+
+Quad-dominant mesh with a 10 mm face sizing applied to the plate face.
 
 | Setting |                        Image                         |
 | :-----: | :--------------------------------------------------: |
 |  Mesh   | ![Mesh](images/quad_10mm_200kpa_mesh.png) |
-|  Model  |                  ![Model](images/)                   |
+|  Model  | ![Model](images/quad_10mm_100kpa_model.png) |
 
 |          Result          |                                  Image                                   |
 | :----------------------: | :----------------------------------------------------------------------: |
@@ -131,12 +147,14 @@ Holes raise local stress above the nominal value, and fatigue cracks usually sta
 |   Maximum Shear Stress   |   ![Maximum Shear Stress](images/quad_10mm_200kpa_max_shear_stress.png)   |
 |      Strain Energy       |      ![Strain Energy](images/quad_10mm_200kpa_strain_energy.png)       |
 
-<!-- Mesh: 2.5 mm -->
+#### Optimization 2: 2.5 mm Quadrilateral Mesh
+
+Quad-dominant mesh with a 2.5 mm face sizing applied to the plate face, the finest mesh in this study.
 
 | Setting |       Image       |
 | :-----: | :---------------: |
-|  Mesh   | ![Mesh](images/)  |
-|  Model  | ![Model](images/) |
+|  Mesh   | ![Mesh](images/quad_2p5mm_100kpa_mesh.png) |
+|  Model  | ![Model](images/quad_2p5mm_100kpa_model.png) |
 
 |          Result          |                                  Image                                   |
 | :----------------------: | :----------------------------------------------------------------------: |
@@ -147,12 +165,14 @@ Holes raise local stress above the nominal value, and fatigue cracks usually sta
 |   Maximum Shear Stress   |   ![Maximum Shear Stress](images/quad_2p5mm_200kpa_max_shear_stress.png)   |
 |      Strain Energy       |      ![Strain Energy](images/quad_2p5mm_200kpa_strain_energy.png)       |
 
-<!-- Mesh: Triangular 10 mm -->
+#### Optimization 3: 10 mm Triangular Mesh
+
+Triangular mesh method with a 10 mm face sizing, used to compare element shape against the 10 mm quadrilateral mesh.
 
 | Setting |       Image       |
 | :-----: | :---------------: |
-|  Mesh   | ![Mesh](images/)  |
-|  Model  | ![Model](images/) |
+|  Mesh   | ![Mesh](images/tri_10mm_100kpa_mesh.png) |
+|  Model  | ![Model](images/quad_2p5mm_100kpa_model.png) |
 
 |          Result          |                                  Image                                   |
 | :----------------------: | :----------------------------------------------------------------------: |
@@ -163,12 +183,14 @@ Holes raise local stress above the nominal value, and fatigue cracks usually sta
 |   Maximum Shear Stress   |   ![Maximum Shear Stress](images/tri_10mm_200kpa_max_shear_stress.png)   |
 |      Strain Energy       |      ![Strain Energy](images/tri_10mm_200kpa_strain_energy.png)       |
 
-<!-- Mesh: Triangular 2.5 mm -->
+#### Optimization 4: 2.5 mm Triangular Mesh
+
+Triangular mesh method with a 2.5 mm face sizing, used to compare element shape against the 2.5 mm quadrilateral mesh.
 
 | Setting |       Image       |
 | :-----: | :---------------: |
-|  Mesh   | ![Mesh](images/)  |
-|  Model  | ![Model](images/) |
+|  Mesh   | ![Mesh](images/tri_2p5mm_100kpa_mesh.png) |
+|  Model  | ![Model](images/quad_2p5mm_100kpa_model.png) |
 
 |          Result          |                                  Image                                   |
 | :----------------------: | :----------------------------------------------------------------------: |
@@ -194,7 +216,7 @@ Holes raise local stress above the nominal value, and fatigue cracks usually sta
 - **No validation:** The results were not compared quantitatively against a handbook stress concentration factor [1], the classical analytical solutions [2], [3], [6] or experimental data.
 - **Geometry documentation:** The plate and hole dimensions were not recorded in the sketch screenshots and were estimated from the scale bar. The back-view image also duplicates the front view.
 - **Single configuration:** Only one hole size, one hole shape and one boundary-condition set were studied.
-- **Missing screenshots:** Some mesh and model images for the 200 kPa cases were not captured. They are identical to the 100 kPa meshes and are left blank.
+- **Reused screenshots:** Several 200 kPa mesh and model cells reuse the 100 kPa screenshots, because the meshes and boundary conditions are identical. The load label visible in those model screenshots therefore belongs to the 100 kPa case.
 
 ## Future Improvements
 
