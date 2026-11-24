@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+
+\usepackage{array}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{comment}
+\usepackage{parskip}
+\usepackage{gensymb}
+\usepackage{tabularx}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsfonts}
+
+\setstretch{1.5}
+\geometry{paper=letterpaper, layout=letterpaper}
+
+\begin{comment}
+
+    Package Description
+
+    float       ->      Improves control over the placement of figures and tables.
+    xcolor      ->      Adds support for colored text, backgrounds, and page elements.
+    authblk     ->      Provides support for author blocks and affiliations.
+    fontenc     ->      Selects font encodings for better character output and hyphenation.
+    amsmath     ->      Provides enhanced environments and commands for mathematical typesetting.
+    comment     ->      Allows block of text to be excluded from the document.
+    parskip     ->      Adjusts paragraph spacing and indentation.
+    amssymb     ->      Provides additional mathematical symbols.
+    geometry    ->      Sets the paper size and layout, including margins.
+    inputenc    ->      Specifies the input text encoding, such as UTF-8.
+    graphicx    ->      Enables including and scaling images.
+    setspace    ->      Controls line spacing, such as single or double spacing.
+    amsfonts    ->      Provides additional mathematical fonts, including \mathbb.
+    microtype   ->      Improves typography through subtle spacing and character adjustments.
+    
+\end{comment}
+
+\begin{document}
+
+% Cover Page
+\input{sections/cover_page.tex}
+
+% Part A
+\input{sections/part_a/prework.tex}
+\input{sections/part_a/theory.tex}
+\input{sections/part_a/components.tex}
+\input{sections/part_a/assignment.tex}
+\input{sections/part_a/discussion.tex}
+
+\newpage
+
+% Part B
+\input{sections/part_b/prework.tex}
+\input{sections/part_b/theory.tex}
+\input{sections/part_b/components.tex}
+\input{sections/part_b/assignment.tex}
+\input{sections/part_b/discussion.tex}
+
+\end{document}
